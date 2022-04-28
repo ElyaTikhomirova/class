@@ -35,7 +35,9 @@ public class Book {
             return false;
         }
         Book nameBook = (Book) other;
-        return nameBook.equals(nameBook);
+        Book year = (Book) other;
+        Book author = (Book) other;
+        return nameBook.equals(((Book) other).nameBook) && year.equals(((Book) other).year) && author.equals(((Book) other).author);
     }
 
     @Override

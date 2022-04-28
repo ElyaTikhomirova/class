@@ -30,7 +30,8 @@ public class Author {
             return false;
         }
         firstNameAuthor = (String) other;
-        return firstNameAuthor.equals(firstNameAuthor);
+        return firstNameAuthor.equals(((Author) other).firstNameAuthor) &&
+                lastNameAuthor.equals(((Author) other).lastNameAuthor);
     }
     @Override
     public int hashCode() {

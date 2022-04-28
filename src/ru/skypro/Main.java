@@ -9,12 +9,13 @@ public class Main {
         Book book = new Book("Nineteen Eighty-Four", author, 1948);
         System.out.println("book.nameBook = " + book.getNameBook());
         System.out.println("book.author = " + book.getAuthor());
+        System.out.println("book.author = " + book.getAuthor().getFirstNameAuthor() +  " " + book.getAuthor().getLastNameAuthor());
         System.out.println("book.year = " + book.getYear());
         book.setYear(1950);
         System.out.println("book.getYear() = " + book.getYear());
 
         Author author1 = new Author("Aldous", "Huxley");
-        Book anotherBook = new Book("Brave New World", author, 1932);
+        Book anotherBook = new Book("Brave New World", author1, 1932);
         System.out.println("anotherBook = " + anotherBook.getNameBook());
         System.out.println("anotherBook.author = " + anotherBook.getAuthor());
         System.out.println("anotherBook.year = " + anotherBook.getYear());
@@ -25,6 +26,9 @@ public class Main {
 
         System.out.println("author1.getFirstNameAuthor = " + author1.getFirstNameAuthor());
         System.out.println("author1.getLastNameAuthor = " + author1.getLastNameAuthor());
+
+        System.out.println(author);
+        System.out.println(book);
 
 
     }

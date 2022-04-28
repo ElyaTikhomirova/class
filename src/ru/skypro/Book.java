@@ -1,5 +1,7 @@
 package ru.skypro;
 
+import java.util.Objects;
+
 public class Book {
     private String nameBook;
     private Author author;
@@ -23,6 +25,21 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
+    public String toString() {
+        return "Book " + this.nameBook + "Author " + author;
+    }
 
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book nameBook = (Book) other;
+        return nameBook.equals(nameBook);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameBook, author, year);
+    }
 }

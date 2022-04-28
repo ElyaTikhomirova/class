@@ -34,10 +34,8 @@ public class Book {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        Book nameBook = (Book) other;
-        Book year = (Book) other;
-        Book author = (Book) other;
-        return nameBook.equals(((Book) other).nameBook) && year.equals(((Book) other).year) && author.equals(((Book) other).author);
+        Book book = (Book) other;
+        return nameBook.equals(((Book) other).nameBook) && book.equals(((Book) other).year) && book.equals(((Book) other).author);
     }
 
     @Override
